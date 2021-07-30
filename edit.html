@@ -1,0 +1,75 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Edit page</title>  
+    {% load static %} 
+    <link rel="stylesheet"href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/update/{{product.id}}">  
+        {% csrf_token %}  
+    <div class="container" style="text-align: center;">  
+<br>
+<div>
+  <p id="heading" style="color: rgb(52, 97, 97); text-align: center;font-weight: bolder;font-size: 2cm;font-style:timesroman;">
+      Cheat rate products
+  </p>
+  <div>
+    <img style="width: 25%;height:6cm;position: absolute;top:2%;left: 5%;" src="https://holochain.org/img/big_logo-2x.png">
+  </div>
+  </div>
+<hr>
+<div>
+    <div style="position:absolute ;top: 30%;right: 40%"> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+        <br>
+    <h3 style="color:rgb(9, 87, 87); text-align: center ;font-weight: bold;font-size: 1.5cm;font-style: italic;">Update Details</h3>  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">Product Image Link:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_img" id="id_product_img" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Image Link ........." requirgb(9, 87, 87) maxlength="10000" value="{{ product.product_img }}"/>  
+    </div>  
+  </div>   
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">Product Id:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_id" id="id_product_id" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product ID ........." requirgb(9, 87, 87) maxlength="10" value="{{ product.product_id }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_name" id="id_product_name" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Name ........." requirgb(9, 87, 87) maxlength="30" value="{{ product.product_name }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product price:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_price" id="id_product_price" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Price ........." requirgb(9, 87, 87) maxlength="20" value="{{ product.product_price }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product manu:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_mnf" id="id_product_mnf" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product manufacturer ........." requirgb(9, 87, 87) maxlength="20" value="{{ product.product_manu }}" />  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+      <p id="button" style="color: rgb(9, 87, 87); text-align: center;font-weight: bold;font-size: 0.75 cm;font-style: italic;"><button type="submit" class="btn btn-success" style="padding: 10px;width: 10cm;background-color: blue;font-size: x-large;font-style: italic;font-weight: bolder;color: white;">Update</button></p>  
+    </div>  
+  </div>    
+    </div>
+  </div>
+  </div>   
+</form>
+</body>
+</html>  
+</body>  
+</html>

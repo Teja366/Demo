@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+
+    <div style="background-color:lightgrey" align="center">
+    <h1 align="center"><b><i>Low Prize items</i></b></h1>
+    </div>
+{% for product in products %} 
+<div  style="background-color: white;">
+    <button>
+            <img src="{{ product.product_img }}" width="240px" height="200px">
+            <p>Product = {{ product.product_id }}</p>
+            <p>Product = {{ product.product_name }}</p>
+            <p>Product = {{ product.product_price }}</p>
+            <p>Product = {{ product.product_mnf }}</p>
+            <a href="/edit/{{ product.id }}">Update</a>
+            <a href="/delete/{{ product.id }}">Delete</a>
+            <br>
+            <br>
+    </button>
+    </div>
+</div>
+{% endfor %}
+<hr>
+<center style="padding: 0.5cm;font-size: 1cm;font-weight: bolder;font-style: italic;text-decoration: none;"><a href="/pro"  class="btn btn-primary">Add New Record</a></center>
+</body>
+</html>
